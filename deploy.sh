@@ -14,6 +14,7 @@ then
 fi
 
 docker create -p 8443:8443 --name node_app $IMAGE_NAME
+#tried killing port 8443 as ubuntu user on EC2 instance
 
 echo $PRIVATE_KEY > privatekey.pem
 
