@@ -5,7 +5,22 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <a href="/math/add">Calculator</a>
+    <a href="/math/add">Add</a>
+    <a href="/math/divide">Divide</a>
+    <a href="/math/multiply">Multiply</a>
+    <a href="/math/subtract">Subtract</a>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>Welcome to the calculator application</p>
+    <form action="<%=title %>" method="get">
+      <input type="number" name="num1" /> +
+      <input type="number" name="num2" />
+    </br>
+      <button type="submit">Submit</button>
+    </form>
+    <%=if (result) { %>
+      <%= num1 %> <%=symbol %> <%= num2 %> = <%= result %>
+    <% } %>
+    
   </body>
 </html>
